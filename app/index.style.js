@@ -263,6 +263,8 @@ export const LanguageClasses = styled.div`
         justify-content: flex-start;
         padding: 100px 20px;
         gap: 60px;
+        margin: 0 auto;
+
 
      
 
@@ -418,6 +420,8 @@ export const FaqDiv = styled.div`
         align-items: flex-start;
         justify-content: flex-start;
         padding: 100px 20px;
+        margin: 0 auto;
+
 
         .heading{
             display: flex;

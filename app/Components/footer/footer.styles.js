@@ -37,6 +37,8 @@ export const FooterDiv = styled.div`
     width: 100%;
     max-width: 1400px;
     padding: 150px 70px 100px;
+    margin: 0 auto;
+
 
 `
 
