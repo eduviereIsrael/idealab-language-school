@@ -36,8 +36,13 @@ export const FooterDiv = styled.div`
     align-items: flex-start;
     width: 100%;
     max-width: 1400px;
-    padding: 150px 70px 100px;
+    padding: 100px 20px 100px;
     margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+        padding: 150px 70px 100px;
+
+    }
 
 
 `
