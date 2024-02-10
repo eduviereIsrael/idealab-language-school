@@ -53,9 +53,7 @@ const Faq = () => {
         <div className="left">
         {
             elementsAtOddIndices(faqData).map((item, i) => (
-                <div className={clickedCards == item.question? "faq-card show": "faq-card"} key={i} onClick={() => {
-                    toggleCard(item.question)
-                }} >
+                <div className={clickedCards == item.question? "faq-card show": "faq-card"} key={i}  >
                     <div className="f-c-header" onClick={() => {
                     toggleCard(item.question)
                 }}  >
@@ -73,9 +71,7 @@ const Faq = () => {
         <div className="right">
         {
             elementsAtEvenIndices(faqData).map((item, i) => (
-                <div className={clickedCards == item.question? "faq-card show": "faq-card"} key={i} onClick={() => {
-                    toggleCard(item.question)
-                }} >
+                <div className={clickedCards == item.question? "faq-card show": "faq-card"} key={i} >
                     <div className="f-c-header" onClick={() => {
                     toggleCard(item.question)
                 }}  >
