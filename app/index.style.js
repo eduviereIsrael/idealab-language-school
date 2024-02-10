@@ -502,6 +502,8 @@ export const FaqDiv = styled.div`
                     opacity: 1;
                     height: 100%;
                     display: unset;
+                    padding-bottom: 12px;
+
                 }
             }
 
