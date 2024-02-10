@@ -476,7 +476,7 @@ export const FaqDiv = styled.div`
 
                 width: 100%;
                 p{
-                    /* display: none; */
+                    display: none;
                     opacity: 0;
                     height: 0;
                     line-height: 150%;
@@ -501,6 +501,7 @@ export const FaqDiv = styled.div`
                 p{
                     opacity: 1;
                     height: 100%;
+                    display: unset;
                 }
             }
 
