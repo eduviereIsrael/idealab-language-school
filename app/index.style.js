@@ -4,7 +4,7 @@ import { styled } from "styled-components"
 
 export const Hero = styled.div`
     width: 100%;
-    height: 100vh;
+    height: 70vh;
     background: url(/hero-img-language.webp);
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,6 +55,7 @@ export const Hero = styled.div`
     }
 
     @media screen and (min-width: 768px) {
+    height: 100vh;
         
         .container{
             padding: 0px 70px;
