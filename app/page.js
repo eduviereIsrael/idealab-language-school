@@ -90,7 +90,7 @@ and tracking your development with ease. </h3>
                 </div>
               </div>
               <div className="second" >
-                <div className="lang-card" >
+                {/* <div className="lang-card" >
                   <p>French</p>
                   <span>French for beginners</span>
                 </div>
@@ -105,7 +105,7 @@ and tracking your development with ease. </h3>
                 <div className="lang-card" >
                   <p>German</p>
                   <span>German for beginners</span>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

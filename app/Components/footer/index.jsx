@@ -2,9 +2,9 @@
 
 import React, {useState} from 'react';
 import emailjs from '@emailjs/browser';
-// import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from 'react-hot-toast';
 import Link from 'next/link';
-
+import { THEME } from '@/app/theme';
 // import { THEME } from '../../styles/theme/theme';
 import { 
   
@@ -26,18 +26,18 @@ const Footer = () => {
   }
 
   const [formValues, setFormValues] = useState({
-    fullName: "",
+    name: "",
     email: "",
-    message: ""
+    feedback: ""
   });
-  const {fullName, email, message} = formValues;
+  const {name, email, feedback} = formValues;
   const [sending, setSending] = useState(false);
   const [buttonCta, setButtonCta] = useState(buttonText.SEND)
   const clearForm = () => {
     setFormValues({
-      fullName: "",
+      name: "",
       email: "",
-      message: ""
+      feedback: ""
     })
   }
 
@@ -51,7 +51,7 @@ const Footer = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!fullName && !email && !message){
+    if (!name && !email && !feedback){
       toast.error("Please check the fields and try again", {
         style: {
           background: THEME.colors.dark1,
@@ -65,17 +65,18 @@ const Footer = () => {
     try{
         setSending(true);
         setButtonCta(buttonText.SENDING);
-        emailjs.send('service_s49fc63', 'template_54wq71r', formValues, 'N_h22gAYodfu_72dU')
+        const details = { title: "New message from language school Website", ...formValues }
+        emailjs.send("service_6aky868", "template_wnrp3ul", details, "yMojghxWlfBMQqRu7")
         .then(function(response) {
-            setSending(false)
-            // toast.success("We will contact you shortly", {
-            //   style: {
-            //     background: THEME.colors.dark1,
-            //     color: THEME.colors.light1,
-            //     fontSize: THEME.font.text,
-            //     fontFamily: "Calibri"
-            //   }
-            // })
+            // setSending(false)
+            toast.success("We will contact you shortly", {
+              style: {
+                background: THEME.colors.dark1,
+                color: THEME.colors.light1,
+                fontSize: THEME.font.text,
+                fontFamily: "Calibri"
+              }
+            })
             setSending(false);
             setButtonCta(buttonText.SENT);
             setTimeout(() => {
@@ -84,14 +85,14 @@ const Footer = () => {
             }, 1500)
         }, function(error) {
             console.log('FAILED...', error);
-            // toast.error("Oops, please check your internet and try again", {
-            //   style: {
-            //     background: THEME.colors.dark1,
-            //     color: THEME.colors.light1,
-            //     fontSize: THEME.font.text,
-            //     fontFamily: "Calibri"
-            //   }
-            // })
+            toast.error("Oops, please check your internet and try again", {
+              style: {
+                background: THEME.colors.dark1,
+                color: THEME.colors.light1,
+                fontSize: THEME.font.text,
+                fontFamily: "Calibri"
+              }
+            })
             setSending(false);
             setButtonCta(buttonText.SEND)
 
@@ -101,14 +102,14 @@ const Footer = () => {
 
     }catch(e){
       console.log("error while trying to sending email", e);
-    //   toast.error("Please check the fields and try again", {
-    //     style: {
-    //       background: THEME.colors.dark1,
-    //       color: THEME.colors.light1,
-    //       fontSize: THEME.font.text,
-    //       fontFamily: "Calibri"
-    //     }
-    //   })
+      toast.error("Please check the fields and try again", {
+        style: {
+          background: THEME.colors.dark1,
+          color: THEME.colors.light1,
+          fontSize: THEME.font.text,
+          fontFamily: "Calibri"
+        }
+      })
       setSending(false);
       setButtonCta(buttonText.SEND)
 
@@ -124,9 +125,9 @@ const Footer = () => {
                     <FooterForm action="#">
                         <input 
                         type="text" 
-                        name="fullName" 
+                        name="name" 
                         id="" 
-                        value={fullName} 
+                        value={name} 
                         placeholder='Your Name' 
                         onChange={handleInputChange}
                         required
@@ -142,30 +143,30 @@ const Footer = () => {
                         />
                         <textarea 
                         type="text" 
-                        name="message" 
-                        value={message} 
+                        name="feedback" 
+                        value={feedback} 
                         id="" 
                         cols={30} 
                         rows={5} 
-                        placeholder='Enter your message' 
+                        placeholder='Enter your feedback' 
                         onChange={handleInputChange}
                         required
                         />
                         
-                        <button onClick={handleSubmit} >Submit</button>
+                        <button onClick={handleSubmit} >{ sending? 'Sending' : 'Submit'}</button>
                     </FooterForm>
                 </ContactDiv>
             </FooterIntro>
             <FooterLinksDiv>
               <div>
                 <h3>Find us on</h3>
-                <FooterLink href={'https://wa.me/message/IMBN57OCXNFTF1'} >WHATSAPP</FooterLink>
+                <FooterLink href={'https://wa.me/feedback/IMBN57OCXNFTF1'} >WHATSAPP</FooterLink>
                 <FooterLink href={'https://instagram.com/eduviere_israel?igshid=NTc4MTIwNjQ2YQ=='} >INSTAGRAM</FooterLink>
                 <FooterLink href={'https://instagram.com/eduviere_israel?igshid=NTc4MTIwNjQ2YQ=='} >TWITTER</FooterLink>
               </div>
             </FooterLinksDiv>
         </FooterDiv>
-        {/* <Toaster /> */}
+        <Toaster />
     </FooterContainer>
   )
 }

@@ -5,7 +5,7 @@ import { styled } from "styled-components"
 export const Hero = styled.div`
     width: 100%;
     height: 100vh;
-    background: url(/hero-img.webp);
+    background: url(/hero-img-language.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -207,8 +207,8 @@ export const SecondSection = styled.div`
 
 export const ThirdSection = styled.div`
     width: 100%;
-    height: 100vh;
-    background: url(/bg-image-1.webp);
+    height: 60vh;
+    background: url(/banner-image.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -220,6 +220,11 @@ export const ThirdSection = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    @media screen and (min-width: 768px){
+        height: 100vh;
+
+    }
 
     h2{
         font-family: 'Roboto', sans-serif;
