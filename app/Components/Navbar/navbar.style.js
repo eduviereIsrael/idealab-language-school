@@ -34,6 +34,14 @@ export const NavbarContainer = styled.div`
         align-items: center;
         justify-content: space-between;
         gap: 25px;
+
+        a, p{
+
+            &:hover{
+                cursor: pointer;
+            }
+            cursor: pointer;
+        }
     }
 
     .logo{
@@ -119,6 +127,11 @@ export const MobileContainer = styled.div`
             font-family: 'Montserrat', sans-serif;
             font-weight: 500;
             margin-bottom: 22px;
+            cursor: pointer;
+        }
+
+        p{
+            cursor: pointer;
         }
 
     }

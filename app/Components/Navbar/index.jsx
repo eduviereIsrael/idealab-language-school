@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <div className="menuitems">
           <span onClick={ () => navigate('/') } >Home</span>
-          <span onClick={ () => navigate() } >About us</span>
+          <span onClick={ () => navigate('/about') } >About us</span>
           <span onClick={ () => navigate('/') } >Contact us</span>
         </div>
       </NavbarContainer>
@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className={navClick? "mob-menu-div menu-show": "mob-menu-div "}>
           <div className="mob-menu-div-cont">
               <a href='/'>Home</a>
-              <a href=''>About Us</a>
+              <a href='/about'>About Us</a>
               <a href='/contact'>Contact Us</a>
               
           </div>

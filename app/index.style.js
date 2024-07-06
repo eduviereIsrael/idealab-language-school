@@ -258,7 +258,7 @@ export const LanguageClasses = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    background-color: #E9E8EE;
+    background-color: #F4F3F3;
 
     .container{
         width: 100%;
