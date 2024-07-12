@@ -237,6 +237,7 @@ export const ThirdSection = styled.div`
         text-align: center;
         color: #fff;
         line-height: 130%;
+        margin-bottom: 20px;
         
 
         span{

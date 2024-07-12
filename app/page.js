@@ -12,7 +12,7 @@ export default function Home() {
 
         <h1>DO NOT LOSE <br/> THE TASTE OF YOUR CULTURE.</h1>
         <p>Connect with your root through our online language classes</p>
-        <Link href={'/'} >
+        <Link href={'https://wa.me/qr/KNAR4TKIXY6VG1'} >
           <span className="cta" >Learn more</span>
         </Link>
         {/* <h1>CONNECT WITH YOUR ROOT
@@ -58,6 +58,9 @@ priorities and less time to studying.</p>
         <h2>
           Language school, <br/> a culture of perpetual excellence
         </h2>
+        <Link href={'https://wa.me/qr/KNAR4TKIXY6VG1'} >
+          <span className="cta" >Learn more</span>
+        </Link>
       </ThirdSection>
       
       <LanguageClasses>

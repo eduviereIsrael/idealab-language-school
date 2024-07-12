@@ -160,9 +160,10 @@ const Footer = () => {
             <FooterLinksDiv>
               <div>
                 <h3>Find us on</h3>
-                <FooterLink href={'https://wa.me/feedback/IMBN57OCXNFTF1'} >WHATSAPP</FooterLink>
-                <FooterLink href={'https://instagram.com/eduviere_israel?igshid=NTc4MTIwNjQ2YQ=='} >INSTAGRAM</FooterLink>
-                <FooterLink href={'https://instagram.com/eduviere_israel?igshid=NTc4MTIwNjQ2YQ=='} >TWITTER</FooterLink>
+                <FooterLink target="_blank" href={'https://wa.me/feedback/IMBN57OCXNFTF1'} >WHATSAPP</FooterLink>
+                <FooterLink target="_blank" href={'https://instagram.com/eduviere_israel?igshid=NTc4MTIwNjQ2YQ=='} >INSTAGRAM</FooterLink>
+                <FooterLink target="_blank" href={'https://www.facebook.com/profile.php?id=61555747124227&mibextid=ZbWKwL'} >FACEBOOK</FooterLink>
+                <FooterLink target="_blank" href={'https://www.linkedin.com/company/idealab-language-academy/'} >LINKEDIN</FooterLink>
               </div>
             </FooterLinksDiv>
         </FooterDiv>

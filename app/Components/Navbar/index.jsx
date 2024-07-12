@@ -19,7 +19,7 @@ const Navbar = () => {
         <div className="menuitems">
           <span onClick={ () => navigate('/') } >Home</span>
           <span onClick={ () => navigate('/about') } >About us</span>
-          <span onClick={ () => navigate('/') } >Contact us</span>
+          <span onClick={ () => navigate('/contact') } >Contact us</span>
         </div>
       </NavbarContainer>
       <MobileContainer>

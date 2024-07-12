@@ -100,53 +100,6 @@ const Page = () => {
   
       <div className='contact-us' >
         <div className='container' >
-            {/* <div className="contact-form">
-                <div className="header">
-        
-                    <h1>Leave us a message</h1>
-                    <p>We would love to hear from you</p>
-                </div>
-                <form onSubmit={handleSubmit} >
-        
-                    <InputTag
-                    tagName={'email'}
-                    Label={'Email*'}
-                    placeHolder={'Enter your email'}
-                    type={'email'}
-                    onChangeHandler={handleInputChange}
-                    value={email}
-                    />
-        
-                    <InputTag
-                    tagName={'name'}
-                    Label={'Name*'}
-                    placeHolder={''}
-                    type={'text'}
-                    onChangeHandler={handleInputChange}
-                    value={name}
-        
-                    />
-        
-                    <TextArea>
-        
-                    <textarea 
-                    name="feedback" 
-                    id="feedback" 
-                    value={feedback} 
-                    onChange={handleInputChange} 
-                    cols="30" 
-                    rows="8"
-                    placeholder='type your message ...'
-        
-                    />
-                    </TextArea>
-        
-        
-                    <PrimaryBtn style={{marginTop: "24px", marginBottom: "60px"}} > { requestStage === requestState.started? <span className='spinner' ></span> : 'Submit' } </PrimaryBtn>
-                    {errBorder && <p style={{width: "100%", textAlign: "right", fontSize: "12px", color: "#F0263C"}} >{errorMessage}</p>}
-        
-                </form>
-            </div> */}
 
             <div className="address">
 

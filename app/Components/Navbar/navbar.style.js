@@ -35,7 +35,7 @@ export const NavbarContainer = styled.div`
         justify-content: space-between;
         gap: 25px;
 
-        a, p{
+        span{
 
             &:hover{
                 cursor: pointer;
